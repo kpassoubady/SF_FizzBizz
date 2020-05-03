@@ -5,10 +5,10 @@ Wiki: https://en.wikipedia.org/wiki/Fizz_buzz
 
 FizzBuzz is a game has gained in popularity as a programming assignment to weed out non-programmers during job interviews. 
 The object of the assignment is less about solving it correctly according to the below rules and more about showing the programmer understands basic, necessary tools such as if-/else-statements and loops. 
+
 The rules of FizzBuzz are as follows:
 
 For numbers 1 through 100:
-
 * For multiples of three print Fizz instead of that number
 * For the multiples of five print Buzz instead of that number
 * For numbers which are multiples of both three and five print FizzBuzz instead of that number
