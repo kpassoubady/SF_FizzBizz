@@ -1,4 +1,4 @@
-package com.kavinschool.fizzbizz;
+package com.kavinschool.fizzbuzz;
 
 import org.junit.Test;
 
