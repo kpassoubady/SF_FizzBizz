@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Change POM Information') {
             steps {
-                echo "checkout code"
+                echo 'checkout code'
                 git 'https://github.com/kpassoubady/SF_FizzBizz.git'
-                echo "Current Maven Build version"
+                echo 'Current Maven Build version'
                 sh 'cat pom.xml'
                 changeVersion()
-                echo "After Changing Maven Build version"
+                echo 'After Changing Maven Build version'
                 sh 'cat pom.xml'
             }
         }

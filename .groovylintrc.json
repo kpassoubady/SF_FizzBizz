@@ -6,6 +6,9 @@
         },
         "DuplicateNumberLiteral": {
             "enabled": false
+        },
+        "DuplicateStringLiteral": {
+            "enabled": false
         }
     }
 }
