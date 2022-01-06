@@ -17,8 +17,10 @@ pipeline {
 private void readRandomInformation() {
     info = readYaml file: '../src/test/resources/randomInfo.yml'
     doe = info.doe
-    callingBirds = info.calling-birds
-    xmas = info.xmas-fifth-day
-    print xmas
-    print doe
+    frenchHens = info.frenchHens
+    turtleDoves = info.turtleDoves
+    println info
+    println doe
+    print frenchHens
+    print turtleDoves
 }
