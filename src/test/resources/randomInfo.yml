@@ -5,15 +5,30 @@ pi: 3.14159
 xmas: true
 frenchHens: 3
 turtleDoves: two
-callingBirds:
-  - huey
-  - dewey
-  - louie
-  - fred
-  xmasFifthDay:
-    callingBirds: four
-    frenchHens: 3
-    goldenRings: 5
-    partridges:
-      count: 1
-      location: "a pear tree"
+applications:
+  authentication:
+    serviceVersion: 2.0
+    serviceUrl: https://myapp.corp/auth
+    appEnv: DEV
+    timeoutInMs: 5000
+    enableLog: true
+
+  service1:
+    enableLog: true
+    authRequired: true
+    appEnv: DEV
+    timeoutInMs: 5000
+    serviceUrl: https://myapp.corp/service1
+    serviceName: SomeService1
+    serviceVersion: 1.1
+    serviceNamespace: http://myapp.corp/ns/service1
+
+  service2:
+    enableLog: true
+    authRequired: true
+    appEnv: DEV
+    timeoutInMs: 5000
+    serviceUrl: https://myapp.corp/service2
+    serviceName: SomeService2
+    serviceVersion: 2.0
+    serviceNamespace: http://myapp.corp/ns/service2
