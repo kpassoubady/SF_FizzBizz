@@ -5,13 +5,16 @@ pipeline {
         POM_ARTIFACTID = readMavenPom().getArtifactId()
         POM_VERSION = readMavenPom().getVersion()
         POM_PACKAGING = readMavenPom().getPackaging()
-        ARTIFACT_VERSION = "${POM_VERSION}.NP.${BUILD_NUMBER}"
+        ARTIFACT_VERSION = "${POM_VERSION}.${BUILD_NUMBER}"
     }
 
     stages {
-        stage("Echo") {
+        stage("Publish Information") {
             steps {
-                echo "$VERSION"
+                echo "POM_ARTIFACTID: ${POM_ARTIFACTID}"
+                echo "POM_VERSION: ${POM_VERSION}"
+                echo "*** BUILD VERSION: ${BUILD_NUMBER}"
+                echo "*** ARTIFACT_VERSION: ${ARTIFACT_VERSION}"
             }
         }
     }
