@@ -8,13 +8,13 @@ pipeline {
                 git 'https://github.com/kpassoubady/SF_FizzBizz.git'
                 echo 'Current server.properties contents'
                 sh 'cat ../src/test/resources/server.properties'
-                readRandomInformation()
+                readPropsInfo()
             }
         }
     }
 }
 
-private void readRandomInformation() {
+private void readPropsInfo() {
     props = readProperties interpolate: true, file: '../src/test/resources/server.properties'
     println props.url
     println props.mode
