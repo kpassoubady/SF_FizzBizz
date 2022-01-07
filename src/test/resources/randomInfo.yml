@@ -18,17 +18,17 @@ applications:
     authRequired: true
     appEnv: DEV
     timeoutInMs: 5000
-    serviceUrl: https://myapp.corp/service1
+    serviceUrl: https://www.kavinschool.com/bugzilla/index.cgi
     serviceName: SomeService1
     serviceVersion: 1.1
-    serviceNamespace: http://myapp.corp/ns/service1
+    serviceNamespace: http://www.kavinschool.com/zenphoto/
 
   service2:
     enableLog: true
     authRequired: true
     appEnv: DEV
     timeoutInMs: 5000
-    serviceUrl: https://myapp.corp/service2
+    serviceUrl: https://quiz.kavinschool.com/
     serviceName: SomeService2
     serviceVersion: 2.0
-    serviceNamespace: http://myapp.corp/ns/service2
+    serviceNamespace: https://www.kavinschool.com/qa_selenium_wp/

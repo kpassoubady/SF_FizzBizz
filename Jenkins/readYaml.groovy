@@ -15,12 +15,13 @@ pipeline {
 }
 
 private void readRandomInformation() {
-    info = readYaml file: '../src/test/resources/randomInfo.yml'
-    doe = info.doe
-    frenchHens = info.frenchHens
-    turtleDoves = info.turtleDoves
-    println info
+    datas = readYaml file: '../src/test/resources/randomInfo.yml'
+    doe = datas.doe
+    frenchHens = datas.frenchHens
+    turtleDoves = datas.turtleDoves
+    println datas
     println doe
     print frenchHens
     print turtleDoves
+    println datas.applications.service2.serviceNamespace
 }
