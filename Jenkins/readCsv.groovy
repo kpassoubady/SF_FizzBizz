@@ -17,8 +17,10 @@ pipeline {
 private void readCsvData() {
     loan_info = readCSV file: '../data/personal_loan_data.csv'
     for (int i = 0; i < loan_info.size(); i++) {
+        row = ''
         for (int j = 0; j <loan_info[0].size(); j++) {
-            println loan_info[i][j]
+            row +=  loan_info[i][j] + ", "
         }
+        println row
     }
 }
