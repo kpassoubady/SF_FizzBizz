@@ -9,7 +9,7 @@ pipeline {
                 echo 'zip src folder'
                 zip glob: "src/**", zipFile: 'sourceCode.zip', overwrite: true
                 echo 'tar jenkins folder'
-                tar glob: "jenkins/**.groovy", file: 'sourceCode.gz', overwrite: true
+                tar glob: "**.groovy", dir:'Jenkins', file: 'jenkins.gz', overwrite: true
                 echo 'unzip the zip/tar files'
                 unzip  zipFile: 'sourceCode.zip', dir: 'javaCode'
                 untar  file: 'jenkins.gz', dir: 'groovyScripts'
