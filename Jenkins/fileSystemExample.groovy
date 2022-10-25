@@ -17,21 +17,20 @@ pipeline {
                     sh 'ls -ltra ../src/test/resources/server.properties'
                 }
                 echo "display workspace directories"
-                script {
-                    def directories = getDirectories("$WORKSPACE")
-                    echo "$directories"
+                
+                dir("$WORKSPACE") {
+                   script {
+                       def files = findFiles() 
+    
+                       files.each { 
+                          file -> 
+                          if(file.directory) {
+                            echo "This is directory: ${file.name} "
+                          }
+                       }
+                    }
                 }
             }
         }
     }
-}
-
-@NonCPS
-def getDirectories(path) {
-    def dir = new File(path)
-    def dirs = []
-    dir.traverse(type: groovy.io.FileType.DIRECTORIES, maxDepth: -1) { d ->
-        dirs.add(d) 
-    }
-    return dirs
 }
