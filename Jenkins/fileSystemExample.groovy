@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'unix'
+    }
 
     stages {
         stage('File System Commands Demo') {
@@ -11,7 +13,10 @@ pipeline {
                     touch 'data/version'
                     echo 'update timestamp of an existing file'
                     touch '../src/test/resources/server.properties'
+                    echo 'display timestamp of an existing file'
+                    sh 'ls -ltra ../src/test/resources/server.properties'
                 }
+                echo "display workspace directories"
                 script {
                     def directories = getDirectories("$WORKSPACE")
                     echo "$directories"
