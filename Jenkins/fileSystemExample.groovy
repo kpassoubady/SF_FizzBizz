@@ -12,9 +12,9 @@ pipeline {
                     echo 'create a new file'
                     touch 'data/version'
                     echo 'update timestamp of an existing file'
-                    touch '../src/test/resources/server.properties'
+                    touch './src/test/resources/server.properties'
                     echo 'display timestamp of an existing file'
-                    sh 'ls -ltra ../src/test/resources/server.properties'
+                    sh 'ls -ltra ./src/test/resources/server.properties'
                 }
                 echo "display workspace directories"
                 
