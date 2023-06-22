@@ -7,7 +7,7 @@ pipeline {
                 echo 'checkout code'
                 git 'https://github.com/kpassoubady/SF_FizzBizz.git'
                 echo 'Current Yaml contents'
-                sh 'cat ../src/test/resources/randomInfo.yml'
+                sh 'cat src/test/resources/randomInfo.yml'
                 readRandomInformation()
             }
         }
@@ -15,7 +15,7 @@ pipeline {
 }
 
 private void readRandomInformation() {
-    datas = readYaml file: '../src/test/resources/randomInfo.yml'
+    datas = readYaml file: 'src/test/resources/randomInfo.yml'
     doe = datas.doe
     frenchHens = datas.frenchHens
     turtleDoves = datas.turtleDoves
