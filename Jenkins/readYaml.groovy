@@ -5,7 +5,7 @@ pipeline {
         stage('Read Random Yml Information') {
             steps {
                 echo 'checkout code'
-                git 'https://github.com/kpassoubady/SF_FizzBizz.git'
+                // git 'https://github.com/kpassoubady/SF_FizzBizz.git'
                 echo 'Current Yaml contents'
                 sh 'cat src/test/resources/randomInfo.yml'
                 readRandomInformation()
