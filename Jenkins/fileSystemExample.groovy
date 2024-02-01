@@ -32,5 +32,12 @@ pipeline {
                 }
             }
         }
+
+        stage('Archive File') {
+             steps {
+                 archiveArtifacts allowEmptyArchive: true, artifacts: '**/*.txt', fingerprint: true, followSymlinks: false
+             }
+        }
+        
     }
 }
