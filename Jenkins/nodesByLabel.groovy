@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Nodes By Label') {
             steps {
-                nodesByLabel('master')
+                nodesByLabel("${WHICH_NODE}")
             }
         }
     }
