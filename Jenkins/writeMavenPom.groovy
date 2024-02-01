@@ -20,6 +20,6 @@ private void changeVersion() {
     pom = readMavenPom file: 'pom.xml'
     pomVersionArray = pom.version.split('\\.')
     pomVersionArray[0] = "${pomVersionArray[0]}".toInteger() + 1
-    pom.version = pomVersionArray.join('.') + env.BUILD_NUMBER
+    pom.version = pomVersionArray.join('.') + '-' + env.BUILD_NUMBER
     writeMavenPom model: pom
 }
